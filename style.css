@@ -1,0 +1,149 @@
+/* ===== Reset and Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+header {
+  background: #343a40;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: white;
+  color: #764ba2;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== Section Styling ===== */
+section {
+  padding: 4rem 2rem;
+}
+
+/* ===== Skills Grid ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skills-grid div {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ===== Project Cards ===== */
+.project-card {
+  background: #ffffff;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #343a40;
+  color: white;
+}
+
+/* ===== Dark Mode Styles ===== */
+.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark header,
+.dark footer {
+  background-color: #1f1f1f;
+}
+
+.dark .project-card,
+.dark .skills-grid div {
+  background-color: #2a2a2a;
+  border-color: #444;
+}
+
+/* ===== Toggle Button (Dark Mode) ===== */
+.dark-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 0.6rem 1rem;
+  border: none;
+  background: #764ba2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+/* ===== Scroll Reveal Animation ===== */
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+section.reveal {
+  opacity: 1;
+  transform: translateY(0px);
+}
